@@ -1,0 +1,105 @@
+<div class="body">
+  <app-navbar></app-navbar>
+  <div class="noticia">
+    <h1>Notícia</h1>
+    <mat-divider class="mat-divider"></mat-divider>
+  </div>
+  <div class="container">
+    <div class="titulo">
+      <h1>{{noticia.titulo}}</h1>
+    </div>
+    <p class="lead" style="text-align: justify; line-height: 1.6; text-align: center;"><br/>{{noticia.descricao}}</p>
+    <br/>
+    <img src="{{noticia.multimediaPrincipal}}"/>
+    <br />
+    <mat-divider class="mat-divider"></mat-divider>
+    <br />
+    <div>
+      <h3>Autor: {{noticia.autores[0].nome}}</h3>
+      <h3>Data de Publicação: {{noticia.data | date: 'd/M/yy, HH:mm:ss'}}</h3>
+      <h3>Categoria: {{noticia.tags[0].nome}}</h3>
+    </div>
+    <mat-divider class="mat-divider"></mat-divider>
+    <p style="text-align: justify; line-height: 1.6" class="lead"><br/>{{noticia.texto}}</p>
+    <mat-divider class="mat-divider"></mat-divider>
+    <div class="like-partilhar">
+      <div class="like">
+        <h1>Gostou?</h1>
+        <button mat-raised-button color="primary" (click)="likeUp()"><mat-icon aria-hidden="false" aria-label="Example home icon">thumb_up</mat-icon> {{like}}</button>
+        <button mat-raised-button color="warn" (click)="dislikeUp()"><mat-icon aria-hidden="false" aria-label="Example home icon">thumb_down</mat-icon> {{dislike}}</button>
+      </div>
+      <div class="partilhar">
+        <h1>Partilha esta Notícia</h1>
+        <div class="imagens">
+          <img src="../../assets/facebook.svg">
+          <img src="../../assets/twitter.svg">
+          <img src="../../assets/whatsapp.svg">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="comentarios"><mat-divider class="mat-divider"></mat-divider>
+      <br>
+      <h1>Deixe o seu comentário:</h1> 
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <div class="card card-white post">
+              <div class="post-heading">
+                <div class="float-left image">
+                  <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="float-left meta">
+                  <div class="title h5">
+                    <a href="#"><b>Ryan Haywood</b></a>
+                    made a post.
+                  </div>
+                </div>
+              </div>
+              <div class="post-description">
+                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p> 
+              </div>
+            </div>
+            <br>
+            <div class="card card-white post">
+              <div class="post-heading">
+                <div class="float-left image">
+                  <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="float-left meta">
+                  <div class="title h5">
+                    <a href="#"><b>Ryan Haywood</b></a>
+                    made a post.
+                  </div>
+                </div>
+              </div>
+              <div class="post-description">
+                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+              </div>
+            </div>
+            <br>
+            <div class="card card-white post">
+              <div class="post-heading">
+                <div class="float-left image">
+                  <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="float-left meta">
+                  <div class="title h5">
+                    <a href="#"><b>Ryan Haywood</b></a>
+                    made a post.
+                  </div>
+                </div>
+              </div>
+              <div class="post-description">
+                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <app-footer></app-footer>
+</div>

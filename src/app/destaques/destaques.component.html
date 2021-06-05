@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="destaques">
+  <h1>Destaques</h1>
+  <mat-divider class="mat-divider"></mat-divider>
+</div>
+<div class="carousel">
+  <ngb-carousel class="borda">
+    <ng-template ngbSlide *ngFor="let destaque of destaques.slice(0,3)">
+      <div class="picsum-img-wrapper">
+        <img src="{{destaque.multimediaPrincipal}}">
+      </div>
+      <div class="carousel-caption" [routerLink]="['/noticia', destaque.id]">
+        <h1>{{destaque.titulo}}</h1>
+        <p>{{destaque.descricao}}</p>
+        <h5>{{destaque.autores[0].nome}} - {{destaque.data | date: 'd/M/yy, HH:mm:ss'}}</h5>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<hr>
+<app-cards [destaques]="destaques"></app-cards>
+<app-footer></app-footer>

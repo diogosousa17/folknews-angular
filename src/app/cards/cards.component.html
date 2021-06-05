@@ -1,0 +1,15 @@
+<div *ngFor="let destaque of destaques.slice(4,10)">
+    <div class="container">
+        <div class="cartao">
+            <div class="esquerda">
+                <img src="{{destaque.multimediaPrincipal}}"/>
+            </div>
+            <div class="direita">
+                <h1>{{destaque.titulo}}</h1>
+                <h5>{{destaque.autores[0].nome}} - {{destaque.data | date: 'd/M/yy, HH:mm:ss'}}</h5>
+                <p>{{destaque.descricao}}</p>
+                <button mat-raised-button color="primary" [routerLink]="['/noticia', destaque.id]">Ler mais</button>
+            </div>
+        </div>
+    </div>
+</div>

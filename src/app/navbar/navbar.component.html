@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/destaques"><mat-icon>language</mat-icon>FolkNews</a>
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse"[ngClass]="{'show': navbarOpen}" id="white">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <button  mat-button routerLink="/destaques">Destaques</button>
+        <button class="matMenu" mat-button [matMenuTriggerFor]="menu">Categorias<mat-icon>expand_more</mat-icon></button>
+      </li>
+      <app-search></app-search>
+      <li class="nav-item">
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/desporto">Desporto</button>
+          <button mat-menu-item routerLink="/saude">Saúde</button>
+          <button mat-menu-item routerLink="/economia">Economia</button>
+          <button mat-menu-item routerLink="/pais">País</button>
+          <button mat-menu-item routerLink="/mundo">Mundo</button>
+          <button mat-menu-item routerLink="/cultura">Cultura</button>
+        </mat-menu>
+      </li>
+    </ul>
+  </div>
+</nav>
